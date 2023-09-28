@@ -1,0 +1,32 @@
+Pentru functia 
+    void sort_sensors(sensor **s, int nr_sens);
+
+Pornim de la exemplul din enuntul problemei:
+Tire_1 Tire_2 PMU_1 PMU_2 Tire_3 PMU_3 Tire_4 Tire_5 PMU_4
+==>
+PMU_1 PMU_2 PMU_3 PMU_4 Tire_1 Tire_2 Tire_3 Tire_4 Tire_5
+
+M-am gandit la urmatoarea strategie de sortare:
+Pas 1:
+1.
+-primului PMU din setul de input ii asociez prioritatea nr_sens
+-celui de al doilea PMU gasit ii asociez prioritatea nr_sens-1
+-...
+-celui de al k ulea PMU ............................ nr_sens-k+1
+-...
+2.
+-primului Tire din setul de input ii asociez prioritatea -1
+-celui de al doilea Tire gasit ii asociez prioritatea -2
+-...
+-celui de al k ulea Tire ............................ -k
+-...
+Pas 2:
+Ramane doar de sortat DESCRESCATOR vectorul de senzori in 
+functie de prioritatile acestea.
+
+Pe exemplul de mai sus prioriatatile sunt:
+Tire_1 Tire_2 PMU_1 PMU_2 Tire_3 PMU_3 Tire_4 Tire_5 PMU_4
+ -1      -2     9     8     -3     7     -4    -5      6
+==Sortare==
+PMU_1 PMU_2 PMU_3 PMU_4 Tire_1 Tire_2 Tire_3 Tire_4 Tire_5
+  9     8     7     6     -1     -2     -3     -4     -5
