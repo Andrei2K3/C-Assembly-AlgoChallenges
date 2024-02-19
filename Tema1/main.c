@@ -155,7 +155,7 @@ void analyze_command(sensor **s, int nr_sens, void (**operatii)(void *))
 	else {
 		index_operations = (*s + index)->operations_idxs;
 		for (int j = 0; j < (*s + index)->nr_operations; j++)
-			(operatii[index_operations[j]])((*s + index)->sensor_data);//*?
+			(operatii[index_operations[j]])((*s + index)->sensor_data);//aplic operatia
 	}
 }
 
